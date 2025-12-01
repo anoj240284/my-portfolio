@@ -1,89 +1,86 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+<body>
+
+    <!-- Background Video -->
     <video autoplay loop muted id="video-background">
-        <!-- Use a small, low-res video for demonstration/performance -->
         <source src="https://www.pexels.com/download/video/28541328/" type="video/mp4">
     </video>
 
-    <body>
-        <header>
-            <!-- Navigation -->
-            <nav>
-
-                <ul>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#project">Project</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-
-            <button class="menu-toggle" id="menu-button">&#9776;</button>
-
-    <!-- Hamburger icon can be a simple text or SVG -->
-
-    </button>
-        </header>
-
-        <!-- Bio -->
-        <section id="About">
-                 <h1>Anoj Rai</h1>
-            <p>Hi, I am Anoj Rai. Studying at Herald College, Kathmandu.</p>
-        </section>
-
-        <!-- Interest -->
-        <section id="Project">
-            <h1><u>Project</u></h1>
-            <h2>Project Done</h2>
-            <p>
-                I have completed several projects, including a Weather App that displays real-time weather information, a Tic-Tac-Toe game in Python that allows two players to play interactively, a Lumbini Tour Game designed to provide a fun and educational travel experience, and a Baking System project that manages recipes, ingredients, and baking steps. These projects helped me strengthen my programming skills and improve my understanding of practical application development.
-            </p>
-        </section>
-
-        <!-- Skills -->
-        <section id="Skills">
-            <h1><u>Skills</u></h1>
-            <h2>Skills Aquire</h2>
-            <ol>
-            <ul>
-                <li>1. Python Programming – writing logic for games and systems.</li>
-                <li>2. Problem-Solving – finding errors, improving code, and creating working solutions.</li>
-                <li>3. Game Development Basics – designing interactive features (Tic-Tac-Toe, Lumbini tour game).</li>
-                <li>4. API Handling – using weather data APIs for the Weather App.</li>
-                <li>5. Data Management – organizing information in the Baking System.</li>
-                <li>6. UI/UX Understanding – making apps easy and simple for users.</li>
-                <li>7. Project Planning – turning ideas into complete working projects.</li>
-                <li>8. Debugging & Testing – checking and fixing issues in your programs.</li>
+    <header>
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Project">Project</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <ol>
-        </section>
+        </nav>
 
+        <button class="menu-toggle" id="menu-button">&#9776;</button>
+    </header>
 
-        <!-- Contact -->
-        <section id="contact">
-            <h1><u>Contact</u></h1>
-            <form action="submit_form" method="post">
-                <label for="Name">Your Name:</label>
-                <input type="text" name="Name" id="Name" required><br><br>
+    <!-- Bio -->
+    <section id="About">
+        <h1>Anoj Rai</h1>
+        <p>Hi, I am Anoj Rai. Studying at Herald College, Kathmandu.</p>
+    </section>
 
-                <label for="Email">Your Email:</label>
-                <input type="email" name="Email" id="Email" required><br><br>
+    <!-- Project -->
+    <section id="Project">
+        <h1><u>Project</u></h1>
+        <h2>Project Done</h2>
+        <p>
+            I have completed several projects, including a Weather App that displays real-time weather information, 
+            a Tic-Tac-Toe game in Python, a Lumbini Tour Game, and a Baking System project. These helped me strengthen 
+            my programming skills and understanding of application development.
+        </p>
+    </section>
 
-                <label for="message">Your Message:</label>
-                <textarea name="message" id="message"></textarea><br><br>
+    <!-- Skills -->
+    <section id="Skills">
+        <h1><u>Skills</u></h1>
+        <h2>Skills Acquired</h2>
+        <ul>
+            <li>Python Programming</li>
+            <li>Problem-Solving</li>
+            <li>Game Development Basics</li>
+            <li>API Handling (Weather App)</li>
+            <li>Data Management</li>
+            <li>UI/UX Understanding</li>
+            <li>Project Planning</li>
+            <li>Debugging & Testing</li>
+        </ul>
+    </section>
 
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+    <!-- Contact -->
+    <section id="contact">
+        <h1><u>Contact</u></h1>
 
-        <script src="script.js"></script>
+        <form id="contact-form" method="post">
+            <label>Your Name:</label>
+            <input type="text" id="name" required>
 
-    </body>
-    </html>
+            <label>Your Email:</label>
+            <input type="email" id="email" required>
+
+            <label>Your Message:</label>
+            <textarea id="message"></textarea>
+
+            <button type="submit">Submit</button>
+
+            <div id="form-message"></div>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
